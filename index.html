@@ -1,1 +1,720 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Murillo Fogaça | Front-end Lead</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="body-background">
+    <div class="container overflow-hidden-md d-flex">
+      <section
+        class="vh-100 w-100 d-flex py-md-5 flex-column justify-content-between page-home"
+      >
+        <div class="col-12">
+          <div class="d-flex align-items-center">
+            <div class="color-barrer"></div>
+            <h1 class="bricolage-grotesque-title px-4">
+              Murillo
+              <small>Fogaça</small>
+            </h1>
+          </div>
+          <h2 class="bricolage-grotesque-title mt-3 px-md-5">
+            Front-end <span class="color-red">Lead</span>
+          </h2>
+          <div class="archivo px-md-5 max-width-768">
+            <p>
+              Hi, I am Murillo, and I have been a
+              <b class="color-red">web developer</b> since 2018, gradually
+              expanding my expertise to include
+              <b class="color-red">mobile development</b>.
+              <br />
+              With years of market experience, my main focuses are creating
+              intuitive mobile interfaces,
+              <b class="color-red"
+                >developing SEO-optimized websites for high-performance search
+                engine interactions</b
+              >, managing and optimizing <b class="color-red">paid traffic</b>,
+              and building performant and concise systems. My development
+              approach emphasizes <b class="color-red">automated testing</b>,
+              <b class="color-red">automated deployments</b>,
+              <b class="color-red">code reviews</b>, structures enabling client
+              process hyper-personalization,
+              <b class="color-red">interface gamification</b>, and
+              <b class="color-red">accessibility</b> for all users. I am
+              continually seeking new opportunities and challenges to apply my
+              skills.
+            </p>
+          </div>
+        </div>
+        <nav class="menulist col-12 archivo-font">
+          <ul
+            class="px-md-5 list-unstyled justify-content-between hoverelement d-none d-md-flex"
+          >
+            <li class="navigate-about">About</li>
+            <li class="navigate-mycareer">My career</li>
+            <li class="navigate-skills">Skills</li>
+            <li class="navigate-projects">Projects</li>
+          </ul>
+          <ul
+            class="px-md-5 list-unstyled d-flex justify-content-between d-block d-md-none"
+          >
+            <li class="navigate-about"><i class="fa fa-user"></i></li>
+            <li class="navigate-mycareer"><i class="fa fa-handshake"></i></li>
+            <li class="navigate-skills"><i class="fa fa-info-circle"></i></li>
+            <li class="navigate-projects"><i class="fa fa-folder"></i></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section
+        class="vh-100 w-100 overflow-hidden-md d-flex py-md-5 flex-column justify-content-between page-about page d-none"
+      >
+        <div class="col-12">
+          <div class="d-flex align-items-center">
+            <div class="color-barrer color-barrer-line"></div>
+            <h1 class="bricolage-grotesque-title px-4">About</h1>
+          </div>
+          <h2 class="bricolage-grotesque-title mt-1 px-md-5">
+            <u class="navigate-home">Murillo Fogaça</u> /
+            <span class="color-red">About</span>
+          </h2>
+
+          <div class="col-12 px-md-5 mt-4">
+            <h2 class="bricolage-grotesque-title mb-0">SOFT SKILLS</h2>
+            <hr class="w-100 mt-1" />
+            <p class="archivo max-width-768">
+              I have been a web developer
+              <b class="color-red">since 2018 and also a mobile developer</b>. I
+              have experience in creating intuitive interfaces, developing
+              <b class="color-red"
+                >SEO-optimized websites, and managing paid traffic</b
+              >. I focus on high-performance systems with automated testing,
+              automated deployments, code reviews, hyper-personalization,
+              gamification, and accessibility. I am always looking for new
+              opportunities and challenges to apply my skills.
+            </p>
+
+            <h2 class="bricolage-grotesque-title mt-5 mb-0">EDUCATION</h2>
+            <hr class="w-100 mt-1" />
+            <div class="row">
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <h4 class="bricolage-grotesque-title mb-0 fw-bold color-red">
+                  BACHELOR IN SYSTEMS ANALYSIS
+                </h4>
+                <h5 class="archivo-font mb-0 fw-bold">
+                  Cruzeiro do Sul, São Paulo, SP
+                </h5>
+                <h6 class="archivo-font mb-0 fw-light">
+                  January 2023 - December 2024
+                </h6>
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <h4 class="bricolage-grotesque-title mb-0 fw-bold color-red">
+                  TECHNICAL IT COURSE FOR THE WEB
+                </h4>
+                <h5 class="archivo-font mb-0 fw-bold">
+                  Etec Fernando Prestes, Sorocaba, SP
+                </h5>
+                <h6 class="archivo-font mb-0 fw-light">
+                  January 2016 - December 2018
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-md-5 hoverelement back-buttom">
+          <span class="navigate-home">Back</span>
+        </div>
+      </section>
+
+      <section
+        class="vh-100 w-100 overflow-hidden-md d-flex py-md-5 flex-column justify-content-between d-none page-mycareer page"
+      >
+        <div class="col-12">
+          <div class="d-flex align-items-center">
+            <div class="color-barrer color-barrer-line"></div>
+            <h1 class="bricolage-grotesque-title px-4">My career</h1>
+          </div>
+          <h2 class="bricolage-grotesque-title mt-1 px-md-5">
+            <u class="navigate-home">Murillo Fogaça</u> /
+            <span class="color-red">My career</span>
+          </h2>
+
+          <div class="col-12 px-md-5 mt-4">
+            <div class="swiper careerSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide pb-4">
+                  <h4 class="bricolage-grotesque-title mb-0 fw-bold color-red">
+                    FIDÚCIA SCM | Mobile
+                  </h4>
+                  <h6 class="archivo-font mb-0 fw-light">
+                    APRIL 2022 - MAY 2024
+                  </h6>
+                  <div class="archivo-font py-1 max-width-768">
+                    <h4 class="mb-0 fw-bold">Mobile Developer:</h4>
+                    <p class="text-career-desc">
+                      I was involved in the development of the company's mobile
+                      applications for both iOS and Android. Additionally, I was
+                      responsible for managing deployments, maintaining bug
+                      fixes, and extracting reports using Firebase.
+                    </p>
+                    <h6 class="mb-0 fw-bold">Technical Skills:</h6>
+                    <u class="d-block"
+                      >Development: Flutter with Clean Architecture, Dart,
+                      Cuppertino + Material
+                    </u>
+                    <u class="d-block">Tracking and Analysis: Firebase</u>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <h4 class="bricolage-grotesque-title mb-0 fw-bold color-red">
+                    FIDÚCIA SCM | Front-End
+                  </h4>
+                  <h6 class="archivo-font mb-0 fw-light">
+                    APRIL 2022 - MAY 2024
+                  </h6>
+                  <div class="archivo-font py-1 max-width-768">
+                    <h4 class="mb-0 fw-bold">Front-End Lead:</h4>
+                    <p class="text-career-desc">
+                      At Fiducia, I was responsible for the creation and
+                      structuring of web frontend processes for various
+                      segments, including credit section, Internet Banking,
+                      Onboarding, and the bank's internal structuring, always
+                      aligned with business rules. Initially, we focused on
+                      structuring based on the concept of "Banking as a
+                      Service." During this period, I developed frontend
+                      concepts utilizing this structure, exploring the use of
+                      partners and creating highly customized layouts to meet
+                      clients' specific needs.
+                    </p>
+                    <h6 class="mb-0 fw-bold">Technical Skills:</h6>
+                    <u class="d-block"
+                      >Development: React, Vite, Next.js, Angular 11, Prisma,
+                      Lumen with MySQL, Composer, PHP 7.4</u
+                    >
+                    <u class="d-block"
+                      >Tracking and Analysis: Google Analytics, Facebook Ads
+                    </u>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <h4 class="bricolage-grotesque-title mb-0 fw-bold color-red">
+                    YANK
+                  </h4>
+                  <h6 class="archivo-font mb-0 fw-light">
+                    JULY 2020 - APRIL 2021
+                  </h6>
+                  <div class="archivo-font py-1 max-width-768">
+                    <h4 class="mb-0 fw-bold">Full-stack Developer:</h4>
+                    <p class="text-career-desc">
+                      At the beginning of the Covid-19 pandemic, I had the
+                      opportunity to collaborate with Yank.ag, where I developed
+                      integrated systems for e-commerce and websites with
+                      content management through dashboards. Additionally, I
+                      created e-learning platforms and scheduling systems for
+                      gyms. During this period, I worked with major companies in
+                      the market, such as Terex, Genie Lift, and Cranes, as well
+                      as contributed to smaller projects for companies like
+                      Condex and CK Sushi. This experience allowed me to enhance
+                      my skills in web development and project management,
+                      providing efficient and customized solutions for our
+                      clients.
+                    </p>
+                    <h6 class="mb-0 fw-bold">Technical Skills:</h6>
+                    <u class="d-block"
+                      >Development: WordPress, Codeigniter, Moodle.
+                    </u>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <h4 class="bricolage-grotesque-title mb-0 fw-bold color-red">
+                    SOROCABACOM
+                  </h4>
+                  <h6 class="archivo-font mb-0 fw-light">
+                    OCTOBER 2022 - JANUARY 2023
+                  </h6>
+                  <div class="archivo-font py-1 max-width-768">
+                    <h4 class="mb-0 fw-bold">Full-stack Developer:</h4>
+                    <p class="text-career-desc">
+                      For a brief period, I worked at SorocabaCom as the Lead
+                      Developer of Applications. My main responsibility was
+                      leading the team in developing WordPress websites with a
+                      focus on SEO optimization. Additionally, we developed web
+                      applications using the Laravel framework, both for CMS and
+                      APIs. We also worked on developing mobile applications
+                      with simple functionalities. Initially, we used Ionic in
+                      conjunction with Angular 11, and later we migrated to
+                      Flutter with Dart. The APIs were developed with Laravel 9,
+                      and we managed these applications through web interfaces
+                      based on Laravel.
+                    </p>
+                    <h6 class="mb-0 fw-bold">Technical Skills:</h6>
+                    <u class="d-block"
+                      >Development: Ionic with Angular, Angular, Laravel,
+                      Flutter with Dart, WordPress, MySQL
+                    </u>
+                    <u class="d-block"
+                      >Tracking and Analysis: Google Analytics, Firebase
+                    </u>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <h4 class="bricolage-grotesque-title mb-0 fw-bold color-red">
+                    EAGLEX MARKETING
+                  </h4>
+                  <h6 class="archivo-font mb-0 fw-light">
+                    JULY 2019 - JUNE 2020
+                  </h6>
+                  <div class="archivo-font py-1 max-width-768">
+                    <h4 class="mb-0 fw-bold">Front-end Web Developer:</h4>
+                    <p class="text-career-desc">
+                      Over the course of a year, I developed websites using
+                      WordPress and React for companies in various sectors,
+                      focusing on user experience and creating optimized
+                      structures to facilitate the exploitation of paid traffic
+                      on the web. I placed a particular emphasis on SEO
+                      structure, ensuring that the sites were search engine
+                      friendly and could attract and convert visitors
+                      effectively. During this period, I obtained certifications
+                      in SEO, Google Analytics, SemRush, and Paid Traffic,
+                      enhancing my knowledge and skills in these areas. I also
+                      created the "Web Punk" product, which focused on web
+                      structure for SEO, click tracking, Heatmap, and continuous
+                      layout improvements to support various marketing
+                      strategies.
+                    </p>
+                    <h6 class="mb-0 fw-bold">Technical Skills:</h6>
+                    <u class="d-block">Development: React, WordPress, MySQL </u>
+                    <u class="d-block"
+                      >Tracking and Analysis: SemRush, Hotjar, Google Analytics
+                    </u>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="px-md-5 hoverelement back-buttom">
+          <span class="navigate-home">Back</span>
+        </div>
+      </section>
+
+      <section
+        class="vh-100 w-100 overflow-hidden-md d-flex py-md-5 flex-column justify-content-between d-none page page-skills"
+      >
+        <div class="col-12">
+          <div class="d-flex align-items-center">
+            <div class="color-barrer color-barrer-line"></div>
+            <h1 class="bricolage-grotesque-title px-4">My career</h1>
+          </div>
+          <h2 class="bricolage-grotesque-title mt-1 px-md-5">
+            <u class="navigate-home">Murillo Fogaça</u> /
+            <span class="color-red">My career</span>
+          </h2>
+
+          <div class="col-12 px-md-5 mt-4">
+            <div class="swiper skillsSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary px-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      FRONT-END
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                          <h5 class="mb-0 fw-bold">FRAMEWORKS:</h5>
+                          <ul class="unstyled px-0 mx-0 list-group">
+                            <li>React.js: ★★★★☆</li>
+                            <li>Codeigniter: ★★★★☆</li>
+                            <li>Next.JS: ★★★★★</li>
+                            <li>WordPress: ★★★★★</li>
+                            <li>Laravel: ★★★☆☆</li>
+                            <li>Ionic: ★★☆☆☆</li>
+                            <li>Storybook: ★★☆☆☆</li>
+                          </ul>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <h5 class="mb-0 fw-bold">LANGUAGES:</h5>
+                          <ul class="unstyled px-0 mx-0 list-group">
+                            <li>Javascript: ★★★★☆</li>
+                            <li>Css: ★★★★★</li>
+                            <li>Typescript: ★★★★☆</li>
+                            <li>PHP: ★★★☆☆</li>
+                          </ul>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <h5 class="mb-0 fw-bold">LIBRARIES:</h5>
+                          <ul class="unstyled px-0 mx-0 list-group">
+                            <li>Tailwind: ★★★★☆</li>
+                            <li>Material UI: ★★★★☆</li>
+                            <li>Styled Components: ★★★★☆</li>
+                            <li>Emotion/UI: ★★★★☆</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary px-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      BACK-END
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h5 class="mb-0 fw-bold">FRAMEWORKS:</h5>
+                      <ul class="unstyled px-0 mx-0 list-group">
+                        <li>Laravel: ★★★☆☆</li>
+                        <li>Node.js: ★★★☆☆</li>
+                        <li>Nest.js: ★★☆☆☆</li>
+                        <li>Prisma: ★★☆☆☆</li>
+                      </ul>
+                      <h5 class="mb-0 mt-3 fw-bold">LANGUAGES:</h5>
+                      <ul class="unstyled px-0 mx-0 list-group">
+                        <li>Mysql: ★★★☆☆</li>
+                        <li>PostgreSQL: ★☆☆☆☆</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary px-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      MOBILE
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h5 class="mb-0 fw-bold">FRAMEWORKS:</h5>
+                      <ul class="unstyled px-0 mx-0 list-group">
+                        <li>Ionic: ★★☆☆☆</li>
+                        <li>Flutter: ★★★☆☆</li>
+                      </ul>
+                      <h5 class="mb-0 mt-3 fw-bold">LIBRARIES:</h5>
+                      <ul class="unstyled px-0 mx-0 list-group">
+                        <li>Mobx: ★★★☆☆</li>
+                        <li>Cupertino: ★★☆☆☆</li>
+                        <li>Material: ★★☆☆☆</li>
+                        <li>Dio: ★★☆☆☆</li>
+                        <li>Intro Slider: ★★☆☆☆</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary px-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      OTHER
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h5 class="mb-0 fw-bold">DEVELOPMENT:</h5>
+                      <ul class="unstyled px-0 mx-0 list-group">
+                        <li>Docker: ★★★☆☆</li>
+                        <li>Git Flow: ★★★★☆</li>
+                        <li>Scrum: ★★★★☆</li>
+                        <li>AWS Services: ★★★☆☆</li>
+                        <li>Linux: ★★★☆☆</li>
+                        <li>Mac: ★★★☆☆</li>
+                      </ul>
+                      <h5 class="mb-0 mt-3 fw-bold">LIBRARIES:</h5>
+                      <ul class="unstyled px-0 mx-0 list-group">
+                        <li>Adobe XD: ★★★★☆</li>
+                        <li>Figma: ★★★★☆</li>
+                        <li>Google Analytics: ★★★☆☆</li>
+                        <li>SemRush: ★★★☆☆</li>
+                        <li>Hotjar: ★★★★☆</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="px-md-5 hoverelement back-buttom">
+          <span class="navigate-home">Back</span>
+        </div>
+      </section>
+
+      <section
+        class="vh-100 w-100 overflow-hidden-md d-flex py-md-5 flex-column justify-content-between d-none page page-projects"
+      >
+        <div class="col-12">
+          <div class="d-flex align-items-center">
+            <div class="color-barrer color-barrer-line"></div>
+            <h1 class="bricolage-grotesque-title px-4">Projects</h1>
+          </div>
+          <h2 class="bricolage-grotesque-title mt-1 px-md-5">
+            <u class="navigate-home">Murillo Fogaça</u> /
+            <span class="color-red">Projects</span>
+          </h2>
+
+          <div class="col-12 px-md-5 mt-4">
+            <div class="swiper skillsSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary p-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      Template React.js
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h6 class="mb-2 fw-bold">
+                        React.js + Tailwind + Clean Architecture + <br />
+                        CI/CD + TanStack.js + Cypress
+                      </h6>
+                      <p>
+                        Este projeto utiliza React.js com Tailwind para
+                        estilização, implementando Clean Architecture para uma
+                        estrutura de código limpa e escalável. CI/CD automatiza
+                        os processos de integração e entrega contínua.
+                        TanStack.js gerencia dados complexos e o Cypress realiza
+                        testes end-to-end, garantindo qualidade e eficiência no
+                        desenvolvimento.
+                      </p>
+                      <a
+                        href="https://github.com/Murilloxfogaca/Template-React.js"
+                        target="_blank"
+                        type="button"
+                        class="btn btn-outline-dark w-100"
+                      >
+                        See more
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary p-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      Template Flutter System native
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h6 class="mb-2 fw-bold">
+                        Flutter + Mobx + Dio + Material
+                      </h6>
+                      <p>
+                        Este projeto utiliza Flutter para desenvolver aplicações
+                        nativas. A arquitetura do sistema integra MobX para
+                        gerenciamento de estado reativo, Dio para requisições
+                        HTTP eficientes e Material Design para uma interface de
+                        usuário moderna e consistente. O template proporciona
+                        uma base sólida, facilitando a criação e manutenção de
+                        aplicativos de alta performance.
+                      </p>
+                      <a
+                        href="https://github.com/Murilloxfogaca/Template-Flutter-System-native"
+                        target="_blank"
+                        type="button"
+                        class="btn btn-outline-dark w-100"
+                      >
+                        See more
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary p-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      Laravel Template CMS
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h6 class="mb-2 fw-bold">Laravel + PHP Unit</h6>
+                      <p>
+                        O Laravel Template CMS é um sistema de gerenciamento de
+                        conteúdo desenvolvido com o framework Laravel e testado
+                        com PHP Unit. Ele oferece uma estrutura robusta e
+                        escalável para construir e gerenciar websites dinâmicos,
+                        integrando funcionalidades avançadas como autenticação,
+                        roteamento, cache, e gerenciamento de banco de dados,
+                        com foco em performance e segurança.
+                      </p>
+                      <a
+                        href="https://github.com/Murilloxfogaca/Laravel-Template-CMS"
+                        target="_blank"
+                        type="button"
+                        class="btn btn-outline-dark w-100"
+                      >
+                        See more
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary p-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      Template Nest.js
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h6 class="mb-2 fw-bold">Nest.js + Node</h6>
+                      <p>
+                        O projeto utiliza Nest.js com Node.js para criar uma
+                        estrutura modular e escalável de backend. Com
+                        arquitetura baseada em módulos, oferece uma organização
+                        clara do código, facilitando a manutenção e expansão.
+                        Inclui suporte nativo para TypeScript, injeção de
+                        dependências, validação de dados, e integrações com
+                        bancos de dados e serviços externos.
+                      </p>
+                      <a
+                        href="https://github.com/Murilloxfogaca/Template-Nest.js"
+                        target="_blank"
+                        type="button"
+                        class="btn btn-outline-dark w-100"
+                      >
+                        See more
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary p-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      O Rubrica
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h6 class="mb-2 fw-bold">
+                        Next.jS + Styled Components + SEO Optimizer
+                      </h6>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus tortor lectus, consequat nec nulla quis,
+                        luctus cras. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Phasellus tortor lectus, consequat nec
+                        nulla quis, luctus cras. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Phasellus tortor lectus,
+                        consequat nec nulla quis, luctus cras.
+                      </p>
+                      <button type="button" class="btn btn-outline-dark w-100">
+                        See more
+                      </button>
+                    </div>
+                  </div>
+                </div -->
+                <!-- div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary p-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      Left Bank
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h6 class="mb-2 fw-bold">
+                        Next.jS + Styled Components + SEO Optimizer
+                      </h6>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus tortor lectus, consequat nec nulla quis,
+                        luctus cras. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Phasellus tortor lectus, consequat nec
+                        nulla quis, luctus cras. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Phasellus tortor lectus,
+                        consequat nec nulla quis, luctus cras.
+                      </p>
+                      <button type="button" class="btn btn-outline-dark w-100">
+                        See more
+                      </button>
+                    </div>
+                  </div>
+                </div -->
+                <div class="swiper-slide pb-4">
+                  <div class="rounded border border-secondary p-2">
+                    <h4
+                      class="bricolage-grotesque-title mb-0 fw-bold color-red"
+                    >
+                      Terceiro Mundo Futsal
+                    </h4>
+                    <div class="archivo-font py-1 max-width-768">
+                      <h6 class="mb-2 fw-bold">
+                        Next.jS + Styled Components + SEO Optimizer
+                      </h6>
+                      <p>
+                        Projeto desenvolvido com Next.js e Styled Components,
+                        proporcionando uma experiência de usuário moderna e
+                        estilizada. Implementamos práticas de SEO avançadas para
+                        otimização de motores de busca, garantindo alta
+                        performance e visibilidade. O uso de Styled Components
+                        facilita a manutenção e escalabilidade do CSS,
+                        resultando em um código limpo e organizado.
+                      </p>
+                      <a
+                        href="https://github.com/Murilloxfogaca/Template-Nest.js"
+                        target="_blank"
+                        type="button"
+                        class="btn btn-outline-dark w-100"
+                      >
+                        See more
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="px-md-5 hoverelement back-buttom">
+          <span class="navigate-home">Back</span>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/swiper.js"></script>
+  <script src="assets/navigation.js"></script>
+</html>

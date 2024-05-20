@@ -1,0 +1,203 @@
+.bricolage-grotesque-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.archivo-font {
+  font-family: "Archivo", sans-serif;
+}
+.color-red {
+  color: #f0243d;
+}
+.color-barrer.color-barrer-line {
+  height: 160px;
+}
+.color-barrer {
+  content: "";
+  background-color: #f0243d;
+  height: 250px;
+  width: 16px;
+  display: block;
+  position: relative;
+  top: 4px;
+}
+
+.max-width-768 {
+  max-width: 768px;
+}
+h2.bricolage-grotesque-title {
+  font-weight: 500;
+  font-size: 3rem;
+}
+h1.bricolage-grotesque-title {
+  font-weight: 700;
+  font-size: 12rem;
+  line-height: 0.9;
+}
+.bricolage-grotesque-title small {
+  line-height: 0.75;
+  font-weight: 500;
+  font-size: 0.65em;
+  display: block;
+}
+.body-background {
+  background-color: #f2f2f2;
+}
+.menulist li {
+  font-size: 2.8rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.careerSwiper .swiper-slide {
+  font-size: 12px;
+  background: #f4f4f4;
+}
+
+span.swiper-pagination-bullet-active {
+  background-color: #f0243d;
+}
+.skillsSwiper {
+  font-size: 14px;
+}
+.unstyled {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .overflow-hidden-md {
+    overflow: hidden !important;
+  }
+}
+
+@media (max-height: 760px) {
+  h1.bricolage-grotesque-title {
+    font-size: 4.5rem;
+  }
+  .color-barrer {
+    height: 150px;
+  }
+  h2.bricolage-grotesque-title {
+    font-size: 1.5rem;
+  }
+  .color-barrer.color-barrer-line {
+    height: 100px;
+  }
+
+  .text-career-desc {
+    font-size: 11px;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0%;
+    background-color: black;
+  }
+  100% {
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+.navigate-home {
+  cursor: pointer;
+}
+
+.hoverelement > li,
+.hoverelement > span {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+.hoverelement > li:before,
+.hoverelement > span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -2px;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+@media (max-width: 768px) {
+  .back-buttom {
+    margin-top: 1.5rem;
+  }
+  .back-buttom,
+  .back-buttom * {
+    width: 100%;
+    text-align: center;
+  }
+  .text-career-desc {
+    font-size: 1.1rem;
+  }
+  .back-buttom {
+    margin-bottom: 1rem;
+  }
+  h1.bricolage-grotesque-title {
+    font-size: 3.5rem;
+  }
+  h2.bricolage-grotesque-title {
+    font-size: 2rem;
+  }
+  .swiper-pagination span {
+    position: relative;
+    top: 10px;
+  }
+  .color-barrer {
+    height: 100px;
+  }
+  h2.bricolage-grotesque-title {
+    font-size: 1.5rem;
+  }
+  .color-barrer.color-barrer-line {
+    height: 100px;
+  }
+  .menulist li {
+    background: #ccc;
+    padding: 10px;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #f0243d;
+  }
+}
+
+.hoverelement > li:hover:before,
+.hoverelement > span:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.sliding {
+  text-decoration: none;
+  display: inline;
+  border-bottom: 2px solid transparent;
+  width: 0px;
+  transition: 1s linear;
+  white-space: nowrap;
+  padding-bottom: 2px;
+}
+.sliding:hover {
+  border-bottom: 2px solid black;
+  width: 100%;
+}
