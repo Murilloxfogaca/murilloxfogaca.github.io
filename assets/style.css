@@ -103,7 +103,17 @@ span.swiper-pagination-bullet-active {
     background-color: transparent;
   }
 }
+.icons-brand a {
+  font-size: 1.2rem;
+  color: #f0243d;
+}
 
+.icons-brand {
+  width: 80px;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
 .navigate-home {
   cursor: pointer;
 }
