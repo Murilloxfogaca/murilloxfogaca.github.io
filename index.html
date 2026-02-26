@@ -3,80 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Murillo Fogaça - Desenvolvedor Front-End Senior especializado em Next.js, React e arquiteturas escaláveis">
-    <title>Murillo Fogaça | Front-End Senior Engineer</title>
+    <meta name="description" content="Murillo Fogaça - Senior Frontend Developer especializado em Hospitality & IoT Solutions com React, Next.js e arquiteturas escaláveis">
+    <title>Murillo Fogaça | Senior Frontend Developer - Hospitality & IoT</title>
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --bg-primary: #0A0A0F;
+            --bg-secondary: #0A1E42;
+            --bg-card: #1B3A5F;
+            --bg-card-hover: #234A75;
+            --text-primary: #F7FAFC;
+            --text-secondary: #CBD5E0;
+            --text-tertiary: #A0AEC0;
+            --accent: #00D9FF;
+            --accent-secondary: #0BC5EA;
+            --accent-hover: #33E1FF;
+            --border: #2D3748;
+            --border-light: #4A5568;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #111111;
-            --bg-card: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --accent: #ff3b3b;
-            --accent-hover: #ff1a1a;
-            --border: #2a2a2a;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
         /* Hero Section */
-        .hero {
+        .hero-section {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(255, 59, 59, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 59, 59, 0.05) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(11, 197, 234, 0.05) 0%, transparent 50%);
             animation: pulse 8s ease-in-out infinite;
         }
 
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+            50% { opacity: 0.6; }
         }
 
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .hero-tag {
             display: inline-block;
-            padding: 8px 16px;
-            background: rgba(255, 59, 59, 0.1);
+            padding: 10px 24px;
+            background: rgba(0, 217, 255, 0.1);
             border: 1px solid var(--accent);
-            border-radius: 20px;
+            border-radius: 24px;
             font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
             color: var(--accent);
-            margin-bottom: 20px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
             animation: fadeInUp 0.6s ease;
         }
 
@@ -91,82 +98,86 @@
             }
         }
 
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
             font-weight: 700;
             margin-bottom: 20px;
             animation: fadeInUp 0.6s ease 0.2s backwards;
+            line-height: 1.2;
         }
 
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--accent) 0%, #ff6b6b 100%);
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1.25rem, 3vw, 1.8rem);
             color: var(--text-secondary);
-            margin-bottom: 30px;
+            margin-bottom: 24px;
+            font-weight: 400;
             animation: fadeInUp 0.6s ease 0.4s backwards;
         }
 
         .hero-description {
-            max-width: 600px;
-            font-size: 18px;
-            color: var(--text-secondary);
+            font-size: 1.125rem;
+            color: var(--text-tertiary);
             margin-bottom: 40px;
+            line-height: 1.8;
             animation: fadeInUp 0.6s ease 0.6s backwards;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.6s ease 0.8s backwards;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-            border: 2px solid transparent;
-        }
-
-        .btn-primary {
+        /* Buttons */
+        .btn-custom-primary {
             background: var(--accent);
             color: var(--bg-primary);
+            padding: 14px 32px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .btn-primary:hover {
+        .btn-custom-primary:hover {
             background: var(--accent-hover);
+            color: var(--bg-primary);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 59, 59, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+            text-decoration: none;
         }
 
-        .btn-secondary {
-            border-color: var(--border);
+        .btn-custom-secondary {
+            border: 2px solid var(--border);
             color: var(--text-primary);
+            padding: 12px 32px;
+            font-weight: 600;
+            border-radius: 8px;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .btn-secondary:hover {
+        .btn-custom-secondary:hover {
             border-color: var(--accent);
-            background: rgba(255, 59, 59, 0.1);
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--accent);
+            text-decoration: none;
         }
 
-        /* Section Styles */
-        section {
-            padding: 100px 0;
+        /* Sections */
+        .section-dark {
+            background: var(--bg-primary);
+            padding: 120px 0;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
+        .section-navy {
+            background: var(--bg-secondary);
+            padding: 120px 0;
         }
 
         .section-tag {
@@ -174,69 +185,74 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            font-weight: 600;
+            margin-bottom: 16px;
         }
 
         .section-title {
             font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 20px;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .skill-card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(255, 59, 59, 0.2);
-        }
-
-        .skill-icon {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .skill-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
+            font-weight: 700;
+            margin-bottom: 24px;
             color: var(--text-primary);
         }
 
-        .skill-card p {
+        /* Cards */
+        .card-custom {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-custom:hover {
+            border-color: var(--accent);
+            background: var(--bg-card-hover);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
+        }
+
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .card-text {
             color: var(--text-secondary);
-            margin-bottom: 20px;
-            font-size: 15px;
+            margin-bottom: 24px;
+            line-height: 1.7;
         }
 
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
+        /* Tech Tags */
         .tech-tag {
-            padding: 6px 12px;
-            background: rgba(0, 217, 255, 0.1);
-            border-radius: 6px;
-            font-size: 12px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(0, 217, 255, 0.08);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
             color: var(--accent);
-            border: 1px solid rgba(0, 217, 255, 0.2);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            margin: 4px;
+            transition: all 0.3s ease;
         }
 
-        /* Experience Timeline */
+        .tech-tag:hover {
+            background: rgba(0, 217, 255, 0.15);
+            border-color: var(--accent);
+        }
+
+        /* Timeline */
         .timeline {
             position: relative;
             padding-left: 40px;
@@ -272,189 +288,188 @@
         .timeline-period {
             color: var(--accent);
             font-size: 14px;
-            margin-bottom: 8px;
             font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .timeline-item h3 {
-            font-size: 24px;
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 600;
             margin-bottom: 8px;
+            color: var(--text-primary);
         }
 
         .timeline-company {
             color: var(--text-secondary);
-            font-size: 16px;
-            margin-bottom: 15px;
+            font-size: 1.125rem;
+            margin-bottom: 16px;
         }
 
         .timeline-description {
-            color: var(--text-secondary);
-            margin-bottom: 15px;
+            color: var(--text-tertiary);
+            margin-bottom: 16px;
             line-height: 1.8;
         }
 
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .timeline-description ul {
+            margin-top: 12px;
+            padding-left: 20px;
         }
 
-        .contact-card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .contact-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .contact-card a {
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .contact-card a:hover {
-            text-decoration: underline;
+        .timeline-description li {
+            margin-bottom: 8px;
         }
 
         /* Footer */
         footer {
-            padding: 40px 0;
-            text-align: center;
+            background: var(--bg-primary);
             border-top: 1px solid var(--border);
-            color: var(--text-secondary);
+            padding: 40px 0;
+            color: var(--text-tertiary);
+            text-align: center;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .cta-buttons {
-                flex-direction: column;
+            .section-dark, .section-navy {
+                padding: 80px 0;
             }
 
-            .btn {
-                width: 100%;
-                text-align: center;
+            .timeline {
+                padding-left: 30px;
             }
 
-            section {
-                padding: 60px 0;
+            .timeline-item::before {
+                left: -35px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-section d-flex align-items-center">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-tag">FRONT-END SENIOR ENGINEER</div>
-                <h1>Murillo <span>Fogaça</span></h1>
-                <p class="hero-subtitle">Especialista em Next.js, React & Arquiteturas Escaláveis</p>
-                <p class="hero-description">
-                    Construindo experiências web de alto desempenho com foco em observabilidade, 
-                    testabilidade e segurança. Experiência em aplicações enterprise com milhões de usuários.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Entre em Contato</a>
-                    <a href="https://github.com/murilloxfogaca" class="btn btn-secondary" target="_blank">Ver GitHub</a>
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 hero-content">
+                    <span class="hero-tag">Hospitality & IoT Specialist</span>
+                    <h1 class="hero-title">Murillo <span class="highlight">Fogaça</span></h1>
+                    <p class="hero-subtitle">Senior Frontend Developer | Hospitality & IoT Solutions</p>
+                    <p class="hero-description">
+                        Com mais de 6 anos de experiência construindo soluções web escaláveis com React, Next.js e TypeScript.
+                        Especialista em arquitetura de microfrontends, integração IoT/MQTT e aplicações para o setor de hospitalidade.
+                        Capacidade comprovada de traduzir requisitos de negócio em código sustentável e evoluir produtos em ambientes ágeis.
+                    </p>
+                    <div class="mt-4">
+                        <a href="#contact" class="btn-custom-primary mr-3 mb-3">Entre em Contato</a>
+                        <a href="murillo-resume-pt.pdf" download class="btn-custom-secondary mr-3 mb-3">Baixar Currículo</a>
+                        <a href="https://github.com/murilloxfogaca" target="_blank" class="btn-custom-secondary mb-3">Ver GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Expertise Section -->
-    <section id="expertise">
+    <section class="section-dark">
         <div class="container">
-            <div class="section-header">
+            <div class="text-center mb-5">
                 <div class="section-tag">Áreas de Expertise</div>
-                <h2 class="section-title">Excelência em Front-End</h2>
+                <h2 class="section-title">Excelência Técnica</h2>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <h3>Observabilidade</h3>
-                    <p>Monitoramento avançado de performance e comportamento do usuário com ferramentas modernas de analytics</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">PostHog</span>
-                        <span class="tech-tag">Google Analytics</span>
-                        <span class="tech-tag">GTM</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">Sentry</span>
+            <div class="row">
+                <!-- IoT & Smart Solutions -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <span class="card-icon">🏨</span>
+                        <h3 class="card-title">IoT & Smart Solutions</h3>
+                        <p class="card-text">Desenvolvimento de soluções IoT para automação hoteleira com integração de dispositivos e plataformas de controle inteligente</p>
+                        <div>
+                            <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Tuya Smart</span>
+                            <span class="tech-tag">SoftAP</span>
+                            <span class="tech-tag">webOS</span>
+                            <span class="tech-tag">Pro:Centric</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">🔒</div>
-                    <h3>Segurança</h3>
-                    <p>Implementação de práticas de segurança front-end e proteção contra vulnerabilidades comuns</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">CSP</span>
-                        <span class="tech-tag">CORS</span>
-                        <span class="tech-tag">XSS Prevention</span>
-                        <span class="tech-tag">OWASP</span>
+                <!-- Arquitetura -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <span class="card-icon">🏗️</span>
+                        <h3 class="card-title">Arquitetura de Software</h3>
+                        <p class="card-text">Especialista em arquiteturas escaláveis com padrões modernos de desenvolvimento e separação de responsabilidades</p>
+                        <div>
+                            <span class="tech-tag">MicroFrontends</span>
+                            <span class="tech-tag">DDD</span>
+                            <span class="tech-tag">Clean Architecture</span>
+                            <span class="tech-tag">Microserviços</span>
+                            <span class="tech-tag">Design Patterns</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>Performance</h3>
-                    <p>Otimização de Core Web Vitals e entrega de experiências ultra-rápidas para o usuário final</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">SSR/SSG</span>
-                        <span class="tech-tag">CDN</span>
+                <!-- Observabilidade -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <span class="card-icon">📊</span>
+                        <h3 class="card-title">Observabilidade</h3>
+                        <p class="card-text">Monitoramento avançado de performance e comportamento do usuário com ferramentas modernas de analytics e telemetria</p>
+                        <div>
+                            <span class="tech-tag">PostHog</span>
+                            <span class="tech-tag">Google Analytics</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Sentry</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">🧪</div>
-                    <h3>Testabilidade</h3>
-                    <p>Estratégias completas de testes automatizados garantindo confiabilidade e qualidade de código</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Jest</span>
-                        <span class="tech-tag">React Testing Library</span>
-                        <span class="tech-tag">Playwright</span>
+                <!-- Performance -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <span class="card-icon">⚡</span>
+                        <h3 class="card-title">Performance</h3>
+                        <p class="card-text">Otimização de Core Web Vitals e entrega de experiências ultra-rápidas para o usuário final</p>
+                        <div>
+                            <span class="tech-tag">SSR/SSG</span>
+                            <span class="tech-tag">CDN</span>
+                            <span class="tech-tag">Core Web Vitals</span>
+                            <span class="tech-tag">SEO Técnico</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Manutenibilidade</h3>
-                    <p>Código limpo, documentado e escalável seguindo princípios SOLID e padrões de mercado</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">ESLint</span>
-                        <span class="tech-tag">Prettier</span>
-                        <span class="tech-tag">Storybook</span>
+                <!-- Testabilidade -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <span class="card-icon">🧪</span>
+                        <h3 class="card-title">Testabilidade</h3>
+                        <p class="card-text">Estratégias completas de testes automatizados garantindo confiabilidade e qualidade de código</p>
+                        <div>
+                            <span class="tech-tag">Jest</span>
+                            <span class="tech-tag">React Testing Library</span>
+                            <span class="tech-tag">TDD</span>
+                            <span class="tech-tag">PHPUnit</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">🎯</div>
-                    <h3>Integridade</h3>
-                    <p>Garantia de consistência de dados e estados da aplicação com validação e tipagem forte</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Zod</span>
-                        <span class="tech-tag">Type Safety</span>
-                        <span class="tech-tag">API Contracts</span>
+                <!-- Manutenibilidade -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <span class="card-icon">🛠️</span>
+                        <h3 class="card-title">Manutenibilidade</h3>
+                        <p class="card-text">Código limpo, documentado e escalável seguindo princípios SOLID e padrões de mercado</p>
+                        <div>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">ESLint</span>
+                            <span class="tech-tag">Prettier</span>
+                            <span class="tech-tag">Storybook</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -462,46 +477,86 @@
     </section>
 
     <!-- Tech Stack -->
-    <section style="background: var(--bg-secondary);">
+    <section class="section-navy">
         <div class="container">
-            <div class="section-header">
+            <div class="text-center mb-5">
                 <div class="section-tag">Stack Principal</div>
                 <h2 class="section-title">Tecnologias & Ferramentas</h2>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Front-End Core</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Redux</span>
-                        <span class="tech-tag">Material UI & Emotion</span>
-                        <span class="tech-tag">Tailwind CSS</span>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <h3 class="card-title">Frontend Core</h3>
+                        <div>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">JavaScript (ES6+)</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Flutter</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-card">
-                    <h3>Back-End & APIs</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Symphony</span>
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">NestJS</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">MongoDB</span>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <h3 class="card-title">Backend & IoT</h3>
+                        <div>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">SoftAP</span>
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Tuya Smart</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-card">
-                    <h3>DevOps & CI/CD</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Vercel</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Kubernetes</span>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <h3 class="card-title">Cloud & DevOps</h3>
+                        <div>
+                            <span class="tech-tag">AWS (S3, Lambda, Rekognition)</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <h3 class="card-title">Banco de Dados</h3>
+                        <div>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">NoSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <h3 class="card-title">Observabilidade</h3>
+                        <div>
+                            <span class="tech-tag">PostHog</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Google Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <h3 class="card-title">Testing</h3>
+                        <div>
+                            <span class="tech-tag">Jest</span>
+                            <span class="tech-tag">React Testing Library</span>
+                            <span class="tech-tag">TDD</span>
+                            <span class="tech-tag">PHPUnit</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -509,76 +564,123 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience">
+    <section class="section-dark" id="experience">
         <div class="container">
-            <div class="section-header">
+            <div class="text-center mb-5">
                 <div class="section-tag">Trajetória</div>
                 <h2 class="section-title">Experiência Profissional</h2>
             </div>
 
             <div class="timeline">
+                <!-- LG Electronics -->
                 <div class="timeline-item">
-                    <div class="timeline-period">Abril 2022 – Maio 2024</div>
-                    <h3>Desenvolvedor Mobile / Líder Front-End</h3>
-                    <div class="timeline-company">Fidúcia SCM</div>
+                    <div class="timeline-period">nov/2025 – Presente</div>
+                    <h3 class="timeline-title">Business Development Specialist</h3>
+                    <div class="timeline-company">LG Electronics Brasil</div>
                     <p class="timeline-description">
-                        Liderança no desenvolvimento de aplicações bancárias mobile com Flutter e React. 
-                        Estruturação de processos front-end aplicando conceito de Banking as a Service. 
-                        Implementação de observabilidade com Firebase Analytics e foco em alta performance.
+                        Desenvolvimento de estratégias de produto para o segmento de Hospitalidade no Brasil, incluindo interfaces para TVs de múltiplas versões (webOS / Pro:Centric).
                     </p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Flutter</span>
+                    <ul class="timeline-description">
+                        <li>Criação e manutenção de soluções IoT para automação de quartos de hotel com integração a dispositivos e plataformas de controle</li>
+                        <li>Manutenção de arquiteturas baseadas em Cloud, on-premises e REST APIs para sistemas de gestão hoteleira</li>
+                        <li>Condução de reuniões técnicas internacionais com equipes multiculturais para alinhamento de roadmap e integrações</li>
+                        <li>Elaboração de documentação técnica e materiais de integração para parceiros e clientes</li>
+                    </ul>
+                    <div>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">webOS</span>
+                        <span class="tech-tag">Pro:Centric</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">Cloud Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Charlie -->
+                <div class="timeline-item">
+                    <div class="timeline-period">nov/2024 – nov/2025</div>
+                    <h3 class="timeline-title">Frontend Developer</h3>
+                    <div class="timeline-company">Charlie</div>
+                    <p class="timeline-description">
+                        Colaboração estratégica com Product Managers e Designers na definição do roadmap técnico e arquitetura de soluções de longo prazo.
+                    </p>
+                    <ul class="timeline-description">
+                        <li>Estruturação e documentação de processos de desenvolvimento frontend, incluindo padrões de código, guidelines de arquitetura e boas práticas de engenharia</li>
+                        <li>Implementação de estratégias de escalabilidade e observabilidade via métricas, logs e dashboards de monitoramento</li>
+                        <li>Atuação como ponte técnica entre engenharia e stakeholders não-técnicos, traduzindo requisitos de negócio em soluções viáveis</li>
+                        <li>Acompanhamento de KPIs de performance e desenvolvimento profissional do time</li>
+                    </ul>
+                    <div>
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Prisma</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">PostHog</span>
+                        <span class="tech-tag">Architecture</span>
                     </div>
                 </div>
 
+                <!-- Fidúcia SCM -->
                 <div class="timeline-item">
-                    <div class="timeline-period">Outubro 2021 – Janeiro 2022</div>
-                    <h3>Líder de Desenvolvimento</h3>
-                    <div class="timeline-company">SorocabaCom</div>
+                    <div class="timeline-period">abr/2022 – abr/2024</div>
+                    <h3 class="timeline-title">Front-End Lead / Mobile Developer</h3>
+                    <div class="timeline-company">Fidúcia SCM</div>
                     <p class="timeline-description">
-                        Liderança de equipe em projetos de SEO e CMS. Desenvolvimento de aplicações mobile 
-                        com Flutter e integração com Firebase para analytics e crash reporting.
+                        Liderança técnica do time de frontend em aplicações bancárias críticas com alto volume de transações.
                     </p>
-                    <div class="tech-tags">
+                    <ul class="timeline-description">
+                        <li>Definição de arquitetura frontend, padrões de código e processos de code review para garantir qualidade e manutenibilidade</li>
+                        <li>Participação ativa em reuniões estratégicas de produto, contribuindo com perspectivas técnicas e análise de viabilidade</li>
+                        <li>Desenvolvimento de aplicações mobile responsivas com Flutter para iOS e Android</li>
+                        <li>Planejamento e execução de estratégias de deploy na App Store e Google Play</li>
+                    </ul>
+                    <div>
+                        <span class="tech-tag">React</span>
                         <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Angular</span>
-                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">Next.js</span>
                         <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Leadership</span>
                     </div>
                 </div>
 
+                <!-- Yank -->
                 <div class="timeline-item">
-                    <div class="timeline-period">Julho 2020 – Abril 2021</div>
-                    <h3>Desenvolvedor Full-Stack</h3>
-                    <div class="timeline-company">Yank.ag</div>
+                    <div class="timeline-period">jul/2020 – abr/2021</div>
+                    <h3 class="timeline-title">Full-Stack Developer</h3>
+                    <div class="timeline-company">Yank</div>
                     <p class="timeline-description">
-                        Desenvolvimento de sistemas de e-commerce e e-learning com foco em performance 
-                        e rastreabilidade de conversões.
+                        Liderança na definição de arquitetura de projetos em colaboração com stakeholders, garantindo soluções escaláveis.
                     </p>
-                    <div class="tech-tags">
+                    <ul class="timeline-description">
+                        <li>Modernização de sistemas legados com boas práticas de refatoração para aumentar manutenibilidade e performance</li>
+                        <li>Desenvolvimento de funcionalidades centradas na experiência do hóspede em plataforma hospitality</li>
+                        <li>Implementação de estratégias de SEO técnico, otimizando visibilidade orgânica dos produtos</li>
+                    </ul>
+                    <div>
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">PHP</span>
                         <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">SEO</span>
                     </div>
                 </div>
 
+                <!-- EagleX -->
                 <div class="timeline-item">
-                    <div class="timeline-period">Julho 2019 – Junho 2020</div>
-                    <h3>Desenvolvedor Front-End</h3>
-                    <div class="timeline-company">Eaglex Marketing</div>
+                    <div class="timeline-period">jul/2019 – jun/2020</div>
+                    <h3 class="timeline-title">Frontend Web Developer</h3>
+                    <div class="timeline-company">EagleX Marketing Digital</div>
                     <p class="timeline-description">
-                        Desenvolvimento de landing pages otimizadas para tráfego pago com implementação 
-                        de Google Analytics, GTM e ferramentas de observabilidade como Hotjar.
+                        Implementação de SEO técnico e on-page: arquitetura da informação, Core Web Vitals e performance.
                     </p>
-                    <div class="tech-tags">
+                    <ul class="timeline-description">
+                        <li>Desenvolvimento de interfaces responsivas com foco em usabilidade, acessibilidade e design centrado no usuário</li>
+                        <li>Integração com sistemas de CRM para automação de processos e centralização de dados</li>
+                        <li>Liderança do desenvolvimento full-cycle do produto web Punk, desde concepção até lançamento</li>
+                    </ul>
+                    <div>
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Google Analytics</span>
                         <span class="tech-tag">SEO</span>
-                        <span class="tech-tag">Hotjar</span>
+                        <span class="tech-tag">CRM Integration</span>
                     </div>
                 </div>
             </div>
@@ -586,30 +688,36 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" style="background: var(--bg-secondary);">
+    <section class="section-navy" id="contact">
         <div class="container">
-            <div class="section-header">
+            <div class="text-center mb-5">
                 <div class="section-tag">Vamos Conversar</div>
                 <h2 class="section-title">Entre em Contato</h2>
             </div>
 
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>E-mail</h3>
-                    <a href="mailto:sxecesar@gmail.com">sxecesar@gmail.com</a>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card-custom text-center">
+                        <span class="card-icon">📧</span>
+                        <h3 class="card-title">E-mail</h3>
+                        <a href="mailto:sxecesar@gmail.com" style="color: var(--accent); text-decoration: none;">sxecesar@gmail.com</a>
+                    </div>
                 </div>
 
-                <div class="contact-card">
-                    <div class="contact-icon">💼</div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/murillofogaca" target="_blank">linkedin.com/in/murillofogaca</a>
+                <div class="col-md-4 mb-4">
+                    <div class="card-custom text-center">
+                        <span class="card-icon">💼</span>
+                        <h3 class="card-title">LinkedIn</h3>
+                        <a href="https://linkedin.com/in/murilloxfogaca" target="_blank" style="color: var(--accent); text-decoration: none;">linkedin.com/in/murilloxfogaca</a>
+                    </div>
                 </div>
 
-                <div class="contact-card">
-                    <div class="contact-icon">🐙</div>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/murilloxfogaca" target="_blank">github.com/murilloxfogaca</a>
+                <div class="col-md-4 mb-4">
+                    <div class="card-custom text-center">
+                        <span class="card-icon">🐙</span>
+                        <h3 class="card-title">GitHub</h3>
+                        <a href="https://github.com/murilloxfogaca" target="_blank" style="color: var(--accent); text-decoration: none;">github.com/murilloxfogaca</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -618,9 +726,14 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Murillo Fogaça. Desenvolvido com Next.js e hospedado no GitHub Pages.</p>
+            <p>&copy; 2025 Murillo Fogaça. Desenvolvido com Bootstrap 4 e hospedado no GitHub Pages.</p>
         </div>
     </footer>
+
+    <!-- Bootstrap 4 JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 
     <script>
         // Smooth scroll
@@ -649,7 +762,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.skill-card, .timeline-item').forEach(el => {
+        document.querySelectorAll('.card-custom, .timeline-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
